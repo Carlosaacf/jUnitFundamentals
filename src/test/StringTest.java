@@ -2,6 +2,7 @@ package test;
 
 
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,6 +25,23 @@ class StringTest {
 		String result = str.toUpperCase();
 		assertEquals("ABCD", result);
 		assertNotNull(result);
+	}
+	
+	@Test
+	void contains_basic() {
+		String str = "abcdefgh";
+		boolean result = str.contains("ijk");
+		assertEquals(false, result);
+		assertFalse(result);
+	}
+	
+	@Test
+	void contains_int() {
+		int a = 3;
+		int b = 2;
+		int soma = a + b;
+		int soma2 = 5;
+		assertEquals(soma, soma2);
 	}
 }
 
